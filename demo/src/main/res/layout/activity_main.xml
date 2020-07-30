@@ -23,6 +23,11 @@
             android:layout_height="wrap_content"
             android:text="多个视频"/>
 
+        <Button
+            android:id="@+id/bt_exoplayer"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="打开一个EXOplayer"/>
 
         <Button
             android:id="@+id/bt_mp4mixmp3"

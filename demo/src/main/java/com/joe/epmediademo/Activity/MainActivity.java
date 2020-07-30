@@ -3,7 +3,6 @@ package com.joe.epmediademo.Activity;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -13,8 +12,6 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.joe.epmediademo.R;
-
-import java.util.concurrent.ConcurrentHashMap;
 
 import Jni.VideoUitls;
 import VideoHandle.EpEditor;
@@ -39,6 +36,12 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(new Intent(MainActivity.this,MergeActivity.class));
+			}
+		});
+		findViewById(R.id.bt_exoplayer).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this, ExoplayerSimpleActivity.class));
 			}
 		});
 		findViewById(R.id.bt_mp4mixmp3).setOnClickListener(new View.OnClickListener() {

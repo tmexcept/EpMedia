@@ -16,10 +16,12 @@ import java.io.InputStream;
 public class MyApplication extends Application {
 
 	private static String savePath;
+	public static MyApplication instance;
 
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		instance = this;
 		choseSavePath();
 		copyFilesFassets(getApplicationContext(), "Ress", savePath);
 	}
