@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/bt_one"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="单个视频"/>
+
+        <Button
+            android:id="@+id/bt_more"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="多个视频"/>
+
+
+        <Button
+            android:id="@+id/bt_mp4mixmp3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="mp4mixmp3"/>
+
+        <Button
+            android:id="@+id/bt_mp4mixmp4"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="mp4mixmp4"/>
+
+        <Button
+            android:id="@+id/bt_addwater"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="addwater"/>
+
+        <Button
+            android:id="@+id/bt_mp3fromMp4"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="mp3fromMp4"/>
+
+        <Button
+            android:id="@+id/bt_mp3Silent"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="mp3Silent"/>
+
+        <Button
+            android:id="@+id/bt_pic2Mp4"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="pic2Mp4"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/bt_mp32WAV"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="mp32WAV  失败"/>
+
+        <Button
+            android:id="@+id/bt_wav2Mp3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="wav2Mp3  失败"/>
+
+        <Button
+            android:id="@+id/bt_gif2Mp4"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="gif2Mp4 不循环"/>
+
+    </LinearLayout>
+
+</LinearLayout>
