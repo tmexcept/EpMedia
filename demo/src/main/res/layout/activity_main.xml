@@ -30,6 +30,12 @@
             android:text="打开一个EXOplayer"/>
 
         <Button
+            android:id="@+id/bt_exoplayer_concat"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="打开一个EXOplayer concat"/>
+
+        <Button
             android:id="@+id/bt_mp4mixmp3"
             android:layout_width="200dp"
             android:layout_height="wrap_content"

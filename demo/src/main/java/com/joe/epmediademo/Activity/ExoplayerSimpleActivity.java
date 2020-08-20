@@ -53,16 +53,15 @@ public class ExoplayerSimpleActivity extends AppCompatActivity implements View.O
         params.height = screenWidth * 9 / 16;
         params.width = screenWidth;
 
+        String video = Environment.getExternalStorageDirectory()+"/xijing/video/aae6a336-8280-4295-afed-03d66d142dbb.mp4";
         exoPlayerV = ExoPlayerFactory.newSimpleInstance(this, new DefaultTrackSelector());
-        exoPlayerV.setVolume(0);
+//        exoPlayerV.setVolume(0);
         componentListenerV = new ComponentListenerV();
         exoPlayerV.addListener(componentListenerV);
         DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(this,
                 Util.getUserAgent(this, "Multimedia"));
         videoSource = new ExtractorMediaSource.Factory(dataSourceFactory)
-                .createMediaSource(Uri.fromFile(
-                        new File(Environment.getExternalStorageDirectory()+"/xijing/video/0def6a4e-4911-4269-bda9-02babb2e4e7b.mp4")
-                ));
+                .createMediaSource(Uri.fromFile(new File(video)));
         playerView.setUseController(false);
         playerView.setPlayer(exoPlayerV);
         exoPlayerV.prepare(videoSource);
@@ -71,9 +70,7 @@ public class ExoplayerSimpleActivity extends AppCompatActivity implements View.O
     @Override
     protected void onResume() {
         super.onResume();
-        iv_play.setVisibility(View.GONE);
-        exoPlayerV.prepare(videoSource, false, true);
-        exoPlayerV.setPlayWhenReady(true);
+        exoPlayerV.prepare(videoSource, false, false);
     }
 
     @Override
