@@ -197,6 +197,15 @@ public class MainActivity extends AppCompatActivity {
 				"[1:v]scale=274:218:force_original_aspect_ratio=decrease[ckout];" +
 				"[0:v][ckout]overlay=x=972:y=136:enable='between(t,0,8)' "+destPath;
 		runCmd(str, srcPath, destPath);
+
+		String scaleVideoAddMp4AddWatermark = "ffmpeg -y -i /sdcard/xijing/video/fc63b338-cb0e-497c-9f1b-b029219926e9.mp4 " +
+				"-i /storage/emulated/0/xijing/dub/1.mp4 " +
+				"-i /storage/emulated/0/xijing/video/icon_watermark.png " +
+				"-filter_complex " +
+				"[0:v]scale=854:480[outv0];[1:v]scale=182:145:force_original_aspect_ratio=decrease[out1];scale=170:45[outv1];[outv0][out1]overlay=x=648:y=90:enable='between(t,0,10.027)'[out2];" +
+				"[out2][outv1]overlay=657:408" +
+				" -an -safe 0 -preset superfast" +
+				" /storage/emulated/0/xijing/output.mp4";
 	}
 
 	private void startAddWater(String srcPath) {
